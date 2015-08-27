@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="spApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPA test</title>
+  <base href="/"/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/vendor/1.4.0.min/angular.min.js"></script>
+  <script src="js/vendor/1.4.0.min/angular-resource.min.js"></script>
+  <script src="./js/vendor/1.4.0.min/angular-route.min.js"></script>
+  <script src="js/vendor/1.4.0.min/angular-messages.min.js"></script>
+  <script src="js/vendor/angular-local-storage.min.js"></script>
+</head>
+<body ng-controller="step1Ctrl">
+  <h1>SP Application (Angular based)</h1>
+
+  <div ng-view>Создайте, пожалуйста, заявку: <a href="/step1">step1.html</a></div>
+
+
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/services.js"></script>
+</body>
+</html>

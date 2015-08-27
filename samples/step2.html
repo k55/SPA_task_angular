@@ -1,0 +1,29 @@
+<div ng-controller="step2Ctrl" class="container">
+
+<h2 class="col-sm-offset-3 col-sm-9">Its time to choose</h2>
+<div class="row">
+
+  <div class="col-sm-3 container currency">
+    <span class="col-sm-12">Выберите валюту:</span>
+    <div class="col-sm-12">
+    <select ng-options="currency for currency in currencies" ng-model="selectedCurrency"></select>
+    </div>
+    <button class="btn btn-primary" ng-click="submitOrder()" ng-disabled="isDisabled">Отправить заявку</button>
+      <p class="hint">{{orderStatus}}</p>
+  </div>
+
+  <div class="col-sm-3" ng-repeat="item in prods">
+    <div class="item">
+      <h3 class="title">{{item.title}}</h3>
+      <p class="about">{{item.about}}
+      </p>
+      <span class="price">{{convertPrice(selectedCurrency, item.price)}}</span>
+      <button ng-click="chooseItem(item.title)" class="btn btn-success choose" change-class>Выбрать</button>
+    </div>
+
+  </div>
+
+</div>
+
+
+</div>

@@ -1,0 +1,63 @@
+<form class="form-horizontal form" role="form" name="form1" ng-submit="form1.$valid && goToStep2()" novalidate>
+
+  <div class="form-group">
+    <label for="name" class="col-sm-offset-2 col-sm-2 control-label">* Name</label>
+    <div class="col-sm-5">
+      <input type="text" name="name" id="name" class="form-control" placeholder="Your name" ng-model="contact.name" ng-model-options="{ updateOn: 'default blur', debounce: { default: 1000, blur: 0 } }" ng-minlength="3" validate-name required>
+    </div>
+    <div class="col-sm-offset-4 col-sm-8 error" ng-messages="form1.name.$error" ng-if='form1.name.$dirty || submitted'>
+      <p ng-message="required">Это поле обязательно для заполнения</p>
+      <p ng-message="minlength">Имя должно состоять минимум из 3 символов</p>
+      <p ng-message="charNumberValidator">Введите правильное название: A-Z a-z 0-9 '</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email" class="col-sm-offset-2 col-sm-2 control-label">* Email</label>
+    <div class="col-sm-5">
+      <input type="email" name="email" class="form-control" id="email" placeholder="email" ng-model="contact.email" ng-model-options="{ updateOn: 'default blur', debounce: { default: 1000, blur: 0 } }" required>
+    </div>
+    <div class="col-sm-offset-4 col-sm-8 error" ng-messages="form1.email.$error" ng-if='form1.email.$dirty || submitted'>
+      <p ng-message="required">Это поле обязательно для заполнения</p>
+      <p ng-message="email">Введите правильный емейл</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="country" class="col-sm-offset-2 col-sm-2 control-label">* Country</label>
+    <div class="col-sm-5" ng-include="selectUrl">
+
+    </div>
+    <div class="col-sm-offset-4 col-sm-8 error" ng-messages="form1.country.$error" ng-if="form1.country.$dirty || submitted">
+      <p ng-message="required">Это поле обязательно для заполнения</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="company" class="col-sm-offset-2 col-sm-2 control-label">* Company name</label>
+    <div class="col-sm-5">
+      <input type="text" name="cName" id="company" class="form-control" placeholder="company name" ng-model="contact.company" ng-model-options="{ updateOn: 'default blur', debounce: { default: 1000, blur: 0 } }" ng-minlength="2" validate-name required
+      >
+    </div>
+    <div class="col-sm-offset-4 col-sm-8 error" ng-messages="form1.cName.$error" ng-if='form1.cName.$dirty || submitted'>
+      <p ng-message="required">Это поле обязательно для заполнения</p>
+      <p ng-message="minlength">Название должно состоять минимум из 2 символов</p>
+      <p ng-message="charNumberValidator">Введите правильное название: A-Z a-z 0-9 '</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="description" class="col-sm-offset-2 col-sm-2 control-label">Company description</label>
+    <div class="col-sm-5">
+      <textarea id="description" class="form-control" ng-model="contact.description" placeholder="Describe your company here"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-5">
+      <button type="submit" class="btn btn-default" ng-click="submitted=true">To step 2</button>
+      <!-- <button type="submit" class="btn btn-default" ng-disabled="form1.$invalid">Submit</button> -->
+    </div>
+  </div>
+
+</form>

@@ -1,0 +1,79 @@
+.form-horizontal .form-group{
+  margin-left: 0;
+  margin-right: 0;
+}
+.form-group{
+  min-height: 65px;
+}
+form .ng-pristine{
+  border: 1px dashed gray;
+}
+
+.form input.ng-invalid.ng-dirty {
+  background-color: #FA787E;
+}
+
+.error{
+  color: red;
+}
+
+.item{
+  margin-bottom: 15px;
+  padding: 15px;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+.item:after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.price{
+  display: block;
+  float: right;
+  padding: 6px 0;
+  font-weight: bold;
+  color: green;
+  text-align: right;
+}
+
+h2{
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: goldenyellow;
+  text-align: center;
+}
+
+.title{
+  min-height: 38px;
+  font-size: 1.25em;
+}
+.about{
+  font-size: .75em;
+}
+
+.btn{
+  float: left;
+}
+
+.currency{
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.currency:before{
+  content: '';
+  display: table;
+  clear: both;
+}
+.currency span{
+  /*text-align: right;*/
+}
+.btn-primary{
+  margin-top: 15px;
+}
+.hint{
+  font-weight: bold;
+  color: orangered;
+  clear: left;
+}
