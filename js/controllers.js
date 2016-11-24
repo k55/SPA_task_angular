@@ -4,15 +4,15 @@ var app = angular.module("spApp", ['ngRoute', 'ngMessages', 'LocalStorageModule'
   $locationProvider.html5Mode(true);
 
   $routeProvider.when('/step1', {
-    templateUrl: "./samples/step1.html"
+    templateUrl: "samples/step1.html"
   });
 
   $routeProvider.when('/step2', {
-    templateUrl: "/samples/step2.html"
+    templateUrl: "samples/step2.html"
   });
 
   $routeProvider.otherwise({
-    template: '<h2 style="text-align: center;">Создайте, пожалуйста заявку: <a href="/step1">Создать</a></h2>'
+    template: '<h2 style="text-align: center;">Создайте, пожалуйста заявку: <a href="'+baseUrl+'/step1">Создать</a></h2>'
   })
 
 })
